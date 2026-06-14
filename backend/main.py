@@ -35,12 +35,15 @@ def sendquery(data:UserQuery):
 
     if 'sleep' in user_query.lower():
         return {
-            #'response':sleep_pc()
-            'response':'sleep called'
+            'response':sleep_pc()
+            #'response':'sleep called'
         }
     
     elif 'shutdown' in user_query.lower() or 'shut down' in user_query.lower():
-        return {'response': 'shutdown called'}
+        return {
+            'response':shutdown_pc()
+            #'response': 'shutdown called'
+            }
     
     else:
         response = chat(
